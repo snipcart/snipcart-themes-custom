@@ -1,0 +1,37 @@
+﻿/**
+    FLASH
+
+    Flash messages
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_flash-border: 1px solid palette(flash, border);
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-flash__item {
+    border-bottom: $_flash-border;
+    padding: 10px 20px;
+    font-size: fontsize(flash, base);
+}
+
+.snip-flash__item--success {
+    background-color: palette(flash, background--success);
+    color: palette(flash, color);
+}
+
+.snip-flash__item--warn {
+    background-color: palette(flash, background--warning);
+    color: palette(flash, color);
+}
+
+.snip-flash__item--error {
+    background-color: palette(flash, background--error);
+    color: palette(flash, color--invert);
+}

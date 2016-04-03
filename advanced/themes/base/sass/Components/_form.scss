@@ -22,7 +22,7 @@ $_form-border: 1px solid palette(form, border);
 }
 
 .snip-form--discount {
-    float: right;
+    float: left;
     margin-right: .5em;
     max-width: 50%;
 
@@ -49,6 +49,7 @@ $_form-border: 1px solid palette(form, border);
     overflow: hidden;
     text-transform: uppercase;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 .snip-form__description {

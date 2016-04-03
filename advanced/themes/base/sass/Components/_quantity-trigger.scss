@@ -25,38 +25,48 @@ $_qt-text-remove: "-";
 // [1]
 .snip-quantity-trigger {
     @include font-bold;
+    display: flex;
     align-items: center;
     color: palette(quantity-trigger, color);
-    display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 1rem 0 0;
 }
 
 .snip-quantity-trigger__text {
     // [2]
     float: left;
-    padding: 0 .313em;
+    width: 2rem;
+    text-align: center;
+
+    &:before,
+    &:after {
+        content: "/";
+        color: palette(quantity-trigger, color--light);
+    }
+
+    &:before {
+        float: left;
+    }
+
+    &:after {
+        float: right;
+    }
 }
 
 .snip-quantity-trigger__btn {
     // [2]
-    background-color: palette(quantity-trigger, background);
-    border-radius: 30px;
     color: inherit;
     float: left;
     font-size: fontsize(quantity-trigger, large);
     font-weight: 400;
-    height: 1em;
-    width: 1em;
+    width: 1.5rem;
+    text-align: center;
 
     &:hover {
-        background-color: palette(quantity-trigger, background--hover);
+        color: #fff;
     }
 
     &:before {
-        display: block;
-        height: 1em;
-        width: 1em;
     }
 }
 
@@ -64,7 +74,6 @@ $_qt-text-remove: "-";
     &:before {
         // [3]
         content: $_qt-text-add;
-        line-height: 1em;
     }
 }
 
@@ -72,7 +81,6 @@ $_qt-text-remove: "-";
     &:before {
         // [3]
         content: $_qt-text-remove;
-        line-height: 14px;
     }
 }
 

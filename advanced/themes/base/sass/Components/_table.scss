@@ -23,12 +23,6 @@ $_table-border: 1px solid palette(table, border);
     font-size: fontsize(table, base);
     text-align: left;
     width: 100%;
-
-    // [1]
-    td, th, tr {
-        border: inherit;
-        padding: inherit;
-    }
 }
 
 .snip-table--small {
@@ -101,16 +95,42 @@ $_table-border: 1px solid palette(table, border);
     font-size: fontsize(table, small);
     padding: 1em 2em;
     text-transform: uppercase;
-
-    ~ .snip-table__header {
-        border-top: $_table-border;
-    }
+    display: none;
 }
 
 .snip-table__body {
-    border-top: $_table-border;
-    display: table-row-group;
-    padding: 1.429em;
+    display: flex;
+    flex-wrap: wrap;
+
+    tr {
+        width: 25%;
+        background: palette(product, background);
+        padding: 3rem 1.5rem 1rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:nth-child(8n+2),
+        &:nth-child(8n+7) {
+            background: palette(product, background--n2);
+        }
+
+        &:nth-child(8n+3),
+        &:nth-child(8n+6) {
+            background: palette(product, background--n3);
+        }
+
+        &:nth-child(8n+4),
+        &:nth-child(8n+5) {
+            background: palette(product, background--n4);
+        }
+    }
+
+    td {
+        display: block;
+    }
 }
 
 .snip-table__body--small {
@@ -138,7 +158,8 @@ $_table-border: 1px solid palette(table, border);
 }
 
 .snip-table__cell--center {
-    text-align: center;
+    order: 8;
+    align-self: center;
 }
 
 .snip-table__cell--right {
@@ -147,11 +168,20 @@ $_table-border: 1px solid palette(table, border);
 
 .snip-table__cell--bold {
     @include font-bold;
+    display: none!important;
 }
 
 .snip-table__cell--highlight {
     @include font-bold;
-    color: palette(table, color--highlight);
+    color: palette(product, color--main);
+    position: absolute;
+    top: 0;
+    height: 3rem;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    line-height: 3rem;
+    font-size: fontsize(product, xlarge);
 }
 
 .snip-table__cell--success {

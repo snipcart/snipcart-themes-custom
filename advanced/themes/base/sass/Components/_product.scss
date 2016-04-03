@@ -23,6 +23,34 @@ $_product-disabled-opacity: 0.2;
     STYLE
 \*------------------------------------*/
 
+#snipcart-items,
+#snipcart-shippings-list {
+    &:before {
+        content: "My cart's content";
+        padding: 1.5em .625em;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        @include font-bold;
+        color: #fff;
+        width: 100%;
+        background: #2a2a2a;
+    }
+}
+
+#snipcart-items {
+    &:before {
+        content: "My cart's content";
+    }
+}
+
+#snipcart-shippings-list {
+    &:before {
+        content: "Chose your Shipping method";
+    }
+}
+
 .snip-product {
     @include clearfix;
     background: palette(product, background);
@@ -47,19 +75,6 @@ $_product-disabled-opacity: 0.2;
 
 .snip-product__thumbnail {
     display: none;
-    float: left;
-    height: $_product-thumbnail-size;
-    margin-right: .714em;
-    width: $_product-thumbnail-size;
-
-    img {
-        max-height: 100%;
-        max-width: 100%;
-    }
-
-    @media #{$mq-medium} {
-        display: block;
-    }
 }
 
 .snip-product__name {
@@ -77,12 +92,12 @@ $_product-disabled-opacity: 0.2;
 
 .snip-product__description {
     font-size: fontsize(product, base) / 1.125;
-    margin-top: .25em;
+    margin-top: 1rem;
     overflow: hidden;
+    color: palette(product, description);
 
     @media #{$mq-medium} {
         font-size: fontsize(product, base);
-        margin-top: .5em;
     }
 }
 
@@ -103,9 +118,34 @@ $_product-disabled-opacity: 0.2;
     top: $padding-small / 1.75;
 
     @media #{$mq-medium} {
-        float: left;
-        margin: -.154em .192em 0 0;
-        position: static;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        transition: color .33s ease;
+
+        &:after {
+            content: "";
+            height: 2px;
+            width: 4rem;
+            position: absolute;
+            top: 1.33rem;
+            left: -.66rem;
+            transform: rotate(-45deg);
+            background: palette(product, color--error);
+            transition: background .33s ease;
+        }
+
+        &:hover {
+            color: palette(product, color--error-hover);
+
+            &:after {
+                background: palette(product, color--error-hover);
+            }
+        }
     }
 }
 

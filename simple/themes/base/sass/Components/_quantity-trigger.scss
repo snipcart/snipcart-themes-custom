@@ -26,7 +26,7 @@ $_qt-text-remove: "-";
 .snip-quantity-trigger {
     @include font-bold;
     align-items: center;
-    color: palette(quantity-trigger, color);
+    color: palette(quantity-trigger, background);
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -42,7 +42,7 @@ $_qt-text-remove: "-";
     // [2]
     background-color: palette(quantity-trigger, background);
     border-radius: 30px;
-    color: inherit;
+    color: palette(quantity-trigger, color);
     float: left;
     font-size: fontsize(quantity-trigger, large);
     font-weight: 400;

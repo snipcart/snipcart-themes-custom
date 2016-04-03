@@ -30,7 +30,6 @@ $_header-total-height: 38px;
 
     @media #{$mq-medium} {
         color: palette(header, color);
-        height: $_header-height;
         padding: 0;
         text-align: center;
     }
@@ -67,7 +66,7 @@ $_header-total-height: 38px;
     }
 
     @media #{$mq-medium} {
-        display: block;
+        display: none!important;
         font-size: fontsize(header, large);
         left: 1.25em;
         line-height: $_header-height;
@@ -77,16 +76,11 @@ $_header-total-height: 38px;
 }
 
 .snip-header__total {
-    background: palette(header, background--highlight);
-    border-radius: 5px;
-    display: inline-block;
-    padding: .5em;
+    display: block!important;
+    padding: 1em;
 
     @media #{$mq-medium} {
-        height: $_header-total-height;
-        line-height: $_header-total-height;
-        margin-top: 2.188em;
-        padding: 0 .625em;
+        padding: 1.5em .625em;
     }
 }
 
@@ -100,7 +94,7 @@ $_header-total-height: 38px;
 
     @media #{$mq-medium} {
         &.js-show {
-            display: block;
+            display: none;
             margin-top: -1.5em;
             position: absolute;
             right: 1.25em;

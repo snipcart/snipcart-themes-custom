@@ -86,8 +86,11 @@ input[type=text],
 input[type=password],
 select {
     background: palette(form, background);
-    border-radius: 3px;
-    border: 1px solid palette(form, border);
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 2px solid palette(form, border);
     box-sizing: border-box;
     color: palette(form, color);
     display: block;

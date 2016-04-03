@@ -21,8 +21,8 @@ $_steps-border: 1px solid palette(step, border);
 
 .snip-steps {
     background: palette(step, background);
-    display: block;
-    height: $_steps-height / 1.25;
+    display: flex;
+    text-align: center;
 
     &.snip-steps--4 li {
         width: percentage(1 / 4);
@@ -39,54 +39,68 @@ $_steps-border: 1px solid palette(step, border);
     &.snip-steps--7 li {
         width: percentage(1 / 7);
     }
-
-    @media #{$mq-medium} {
-        height: $_steps-height;
-    }
 }
 
 .snip-step__item {
-    background: palette(step, background);
-    border-bottom: $_steps-border;
+    background: palette(step, background--1);
     color: palette(step, color);
     cursor: pointer;
-    display: table;
-    float: left;
-    height: inherit;
-    // [1]
     user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
 
-    @supports (display: flex) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &:nth-child(n+2) {
+        background: palette(step, background--2);
     }
 
-    + .snip-step__item {
-        border-left: $_steps-border;
+    &:nth-child(n+3) {
+        background: palette(step, background--3);
+    }
+
+    &:nth-child(n+4) {
+        background: palette(step, background--4);
+    }
+
+    &:nth-child(n+5) {
+        background: palette(step, background--5);
+    }
+
+    &:nth-child(n+6) {
+        background: palette(step, background--6);
+    }
+
+    &:nth-child(n+6) {
+        background: palette(step, background--6);
+    }
+
+    &:nth-child(n+7) {
+        background: palette(step, background--7);
     }
 
     &.js-active {
         background: palette(step, background--active);
-        border-bottom-color: palette(step, background--active);
         color: palette(step, color--active);
+
+        .snip-step__nb {
+            display: block;
+        }
+
+        .snip-step__label {
+            display: none;
+        }
     }
 
     &.js-hidden {
         display: none;
     }
-
-    @media #{$mq-medium} {
-        justify-content: initial;
-    }
 }
 
 .snip-step__nb {
-    display: table-cell;
     font-size: fontsize(step, icon) / 1.25;
     padding: 0 .25em;
-    text-align: center;
-    vertical-align: middle;
+    display: none;
 
     @media #{$mq-medium} {
         font-size: fontsize(step, icon);
@@ -94,21 +108,11 @@ $_steps-border: 1px solid palette(step, border);
 }
 
 .snip-step__label {
-    display: none;
-
     @media #{$mq-medium} {
         @include font-bold;
-        display: table-cell;
         font-size: fontsize(step, small);
         line-height: 16px;
-        padding-right: .5em;
-        text-align: left;
         text-transform: uppercase;
-        vertical-align: middle;
         width: 66.666666%;
-    }
-
-    @media #{$mq-large} {
-        padding-right: 1em;
     }
 }

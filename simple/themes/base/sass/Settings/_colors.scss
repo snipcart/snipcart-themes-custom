@@ -12,12 +12,12 @@ $palettes: (
         link: #999
     ),
     button: (
-        background: #555,
-        background--highlight: #efe778,
-        background--hover: darken(#555, 10%),
-        background--highlight-hover: darken(#efe778, 10%),
-        color: #fff,
-        color--highlight: #222
+        background: #ddd,
+        background--highlight: #a2c1df,
+        background--hover: lighten(#ddd, 5%),
+        background--highlight-hover: darken(#a2c1df, 33%),
+        color: darken(#a2c1df, 33%),
+        color--highlight: #fff
     ),
     error: (
         color: #f10,
@@ -33,67 +33,66 @@ $palettes: (
         color--invert: #fff
     ),
     footer: (
-        background: #222,
-        color: #555,
-        color--highlight: #999
+        background: #f4f6f8,
+        color--highlight: #aaa
     ),
     form: (
         background: #fff,
         border: #eee,
-        border--focus: #333,
-        color: #555,
+        border--focus: darken(#a2c1df, 33%),
+        color: darken(#a2c1df, 33%),
         color--highlight: #333,
         label-color: #999
     ),
     header: (
-        background: #222,
-        background--highlight: #111,
-        color: #fff,
-        label-color: #999
+        background: #f4f6f8,
+        background--highlight: #ddd,
+        color:  #a2c1df,
+        label-color: darken(#a2c1df, 33%)
     ),
     layout: (
         background: #fff,
-        border: #eee,
+        border: #f8f8f8,
         close-color: #fff,
-        color: #999,
+        color: #aaa,
         content-background: #f8f8f8,
         content-border: #bbb,
         loading-color: #333
     ),
     loader: (
-        background: #222,
-        background--highlight: #efe778
+        background: lighten(#a2c1df, 15%),
+        background--highlight: darken(#a2c1df, 33%)
     ),
     product: (
         background: #f8f8f8,
-        border: #eee,
-        color--error: #f10,
-        color--highlight: #333
+        border: #f8f8f8,
+        color--error: #e65,
+        color--highlight: #a2c1df
     ),
     quantity-trigger: (
-        background: #ccc,
+        background: #a2c1df,
         background--hover: #efe778,
         background--disabled: #eee,
-        color: #111,
+        color: #fff,
         color--disabled: #bbb
     ),
     static: (
         background--highlight: #f8f8f8,
         border: #eee,
-        color--highlight: #333,
+        color--highlight: darken(#a2c1df, 33%),
         color--link: #999
     ),
     step: (
-        background: #ccc,
-        background--active: #fff,
-        border: #bbb,
-        color: #999,
-        color--active: #333
+        background: lighten(#a2c1df, 15%),
+        background--active: darken(#a2c1df, 33%),
+        border: lighten(#a2c1df, 15%),
+        color: #a2c1df,
+        color--active: #fff
     ),
     table: (
         background--highlight: #f8f8f8,
-        border: #eee,
-        color--highlight: #333,
+        border: #f8f8f8,
+        color--highlight: #a2c1df,
         color--success: #76d443
     ),
     tooltip: (

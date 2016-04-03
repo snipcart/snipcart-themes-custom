@@ -4,7 +4,8 @@
     We don't want to load many fonts on your site so we stay classic.
     You can add your custom fonts here and/or define your own fonts family variables.
 */
-$font-base: Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+$font-base: 'Open Sans', sans-serif;
 
 
 /**
@@ -27,7 +28,7 @@ $font-base: Arial, sans-serif;
     - add your font-family. Ex: font-family: 'myFont-bold';
 */
 @mixin font-bold {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
@@ -61,7 +62,8 @@ $fontsize: (
     product: (
         base: 14px,
         large: 20px,
-        icon: 30px
+        xlarge: 26px,
+        icon: 20px
     ),
     quantity-trigger: (
         large: 18px

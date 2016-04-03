@@ -22,8 +22,9 @@ $_layout-content-border: 1px solid palette(layout, content-border);
 .snip-layout__main-container {
     background: palette(layout, background);
     margin: 0 auto;
-    max-width: 62.25em;
+    max-width: 70.125em;
     position: relative;
+    overflow: hidden;
 }
 
 .snip-layout__close {
@@ -32,16 +33,35 @@ $_layout-content-border: 1px solid palette(layout, content-border);
     padding: .333em;
     padding: 0;
     position: absolute;
-    right: .417em;
-    top: .1em;
+    left: 0;
+    top: 0;
+    text-align: center;
     z-index: 2;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
 
     @media #{$mq-medium} {
         font-size: $_layout-close-font-size;
-        top: .208em;
 
         &.js-hidden {
-            display: none;
+            //display: none;
+        }
+
+        &:after {
+            content: "";
+            height: 2px;
+            width: 6rem;
+            position: absolute;
+            top: 2rem;
+            left: -1.66rem;
+            transform: rotate(-45deg);
+            background: palette(layout, close-border-color);
+            transition: background .33s ease;
+        }
+
+        &:hover {
+            color: palette(layout, close-color-hover);
         }
     }
 }

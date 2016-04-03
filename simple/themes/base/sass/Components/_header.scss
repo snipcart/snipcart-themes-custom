@@ -77,22 +77,24 @@ $_header-total-height: 38px;
 }
 
 .snip-header__total {
-    background: palette(header, background--highlight);
-    border-radius: 5px;
+    border-top: 2px solid palette(header, color);
+    border-bottom: 2px solid palette(header, color);
+    color: palette(header, label-color);
+    //border-radius: 5px;
     display: inline-block;
     padding: .5em;
+    font-size: fontsize(header, large);
 
     @media #{$mq-medium} {
-        height: $_header-total-height;
-        line-height: $_header-total-height;
-        margin-top: 2.188em;
-        padding: 0 .625em;
+        margin-top: .85em;
+        padding: .25em 2em;
     }
 }
 
 .snip-header__total-label {
-    color: palette(header, label-color);
+    color: palette(header, color);
     margin-right: .625em;
+    display: none;
 }
 
 .snip-header__continue {

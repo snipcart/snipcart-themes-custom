@@ -10,22 +10,45 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_action-pad: 20px;
+$_action-pad: 1.75rem;
 $_action-border: 1px solid palette(layout, border);
 
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
+#snipcart-discounts {
+    float: left;
+    width: 50%;
+    line-height: $_btn-size;
+
+    a {
+        color: palette(form, border);
+    }
+}
+
 .snip-actions {
-    border-top: $_action-border;
     padding: $padding-small;
+    overflow: hidden;
 
     // [1]
     @include clearfix;
 
     @media #{$mq-medium} {
         padding: $_action-pad;
+    }
+}
+
+#snip-layout-billing-address,
+#snip-layout-payment-method {
+    .snip-actions {
+        border-top: $_action-border;
+    }
+}
+
+#snip-layout-payment-method {
+    .snip-actions {
+        margin-top: 3rem;
     }
 }
 

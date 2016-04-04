@@ -23,34 +23,6 @@ $_product-disabled-opacity: 0.2;
     STYLE
 \*------------------------------------*/
 
-#snipcart-items,
-#snipcart-shippings-list {
-    &:before {
-        content: "My cart's content";
-        padding: 1.5em .625em;
-        font-size: 16px;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        @include font-bold;
-        color: #fff;
-        width: 100%;
-        background: #2a2a2a;
-    }
-}
-
-#snipcart-items {
-    &:before {
-        content: "My cart's content";
-    }
-}
-
-#snipcart-shippings-list {
-    &:before {
-        content: "Chose your Shipping method";
-    }
-}
-
 .snip-product {
     @include clearfix;
     background: palette(product, background);
@@ -86,13 +58,20 @@ $_product-disabled-opacity: 0.2;
 
     @media #{$mq-medium} {
         font-size: fontsize(product, base);
-        margin-top: .5em;
+        margin-top: 1em;
+    }
+}
+
+#snip-layout-shipping-method {
+    .snip-product__name {
+        color: palette(product, background);
+        margin-top: 0;
     }
 }
 
 .snip-product__description {
     font-size: fontsize(product, base) / 1.125;
-    margin-top: 1rem;
+    margin-top: .5rem;
     overflow: hidden;
     color: palette(product, description);
 
@@ -111,7 +90,7 @@ $_product-disabled-opacity: 0.2;
 }
 
 .snip-product__remove {
-    color: palette(product, color--error);
+    color: palette(product, color--highlight);
     font-size: fontsize(product, icon);
     position: absolute;
     right: $padding-small / 3.5;
@@ -129,11 +108,11 @@ $_product-disabled-opacity: 0.2;
 
         &:after {
             content: "";
-            height: 2px;
+            height: 3rem;
             width: 4rem;
             position: absolute;
-            top: 1.33rem;
-            left: -.66rem;
+            top: -1.27rem;
+            left: -1.66rem;
             transform: rotate(-45deg);
             background: palette(product, color--error);
             transition: background .33s ease;

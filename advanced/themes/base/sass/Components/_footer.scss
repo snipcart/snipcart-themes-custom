@@ -8,7 +8,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_footer-height: 35px;
+$_footer-height: 30px;
 
 
 /*------------------------------------*\
@@ -16,9 +16,10 @@ $_footer-height: 35px;
 \*------------------------------------*/
 
 .snip-footer {
-    background: palette(footer, background);
-    padding: .125em .625em;
+    padding: .125em 1.75rem;
     text-transform: uppercase;
+    border-top: 1px solid palette(footer, background);
+    text-align: center;
 }
 
 .snip-footer__copyright {

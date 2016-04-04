@@ -92,6 +92,6 @@ body.snip-open {
     // Responsive
     @media #{$mq-large} {
         font-size: fontsize(reset, large);
-        padding: $_base-padding;
+        padding: 0 0 $_base-padding;
     }
 }

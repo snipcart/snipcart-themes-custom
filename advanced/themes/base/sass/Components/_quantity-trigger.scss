@@ -30,6 +30,8 @@ $_qt-text-remove: "-";
     color: palette(quantity-trigger, color);
     justify-content: center;
     margin: 1rem 0 0;
+    background: palette(quantity-trigger, background);
+    border-radius: 8em;
 }
 
 .snip-quantity-trigger__text {
@@ -37,20 +39,6 @@ $_qt-text-remove: "-";
     float: left;
     width: 2rem;
     text-align: center;
-
-    &:before,
-    &:after {
-        content: "/";
-        color: palette(quantity-trigger, color--light);
-    }
-
-    &:before {
-        float: left;
-    }
-
-    &:after {
-        float: right;
-    }
 }
 
 .snip-quantity-trigger__btn {
@@ -63,10 +51,7 @@ $_qt-text-remove: "-";
     text-align: center;
 
     &:hover {
-        color: #fff;
-    }
-
-    &:before {
+        color: palette(quantity-trigger, color--light);
     }
 }
 

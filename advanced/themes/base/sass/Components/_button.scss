@@ -11,7 +11,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_btn-size: 36px;
+$_btn-size: 40px;
 
 
 /*------------------------------------*\
@@ -31,8 +31,9 @@ $_btn-size: 36px;
     height: $_btn-size;
     line-height: $_btn-size;
     outline: 0;
-    padding: 0 1em;
+    padding: 0 2em;
     text-transform: uppercase;
+    letter-spacing: 1px;
 
     &:hover {
         background-color: palette(button, background--hover);
@@ -40,7 +41,7 @@ $_btn-size: 36px;
 
     @media #{$mq-medium} {
         font-size: fontsize(button, base);
-        padding: 0 2em;
+        padding: 0 4em;
     }
 }
 

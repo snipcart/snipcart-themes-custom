@@ -12,12 +12,12 @@ $palettes: (
         link: lighten(#0a4e5f, 30%)
     ),
     button: (
-        background: #555,
-        background--highlight: lighten(#0a4e5f, 30%),
-        background--hover: darken(#555, 10%),
-        background--highlight-hover: lighten(#0a4e5f, 10%),
-        color: #fff,
-        color--highlight: #222
+        background: #607B7D,
+        background--highlight: #AAAE8E,
+        background--hover: #3A606E,
+        background--highlight-hover: darken(#AAAE8E, 10%),
+        color: rgba(#fff, .66),
+        color--highlight: rgba(#000, .66)
     ),
     error: (
         color: #f10,
@@ -33,29 +33,29 @@ $palettes: (
         color--invert: #fff
     ),
     footer: (
-        background: #333,
+        background: #e8e8e8,
         color: #555,
         color--highlight: #999
     ),
     form: (
         background: transparent,
-        border: lighten(#0a4e5f, 30%),
-        border--focus: #fff,
-        color: #fff,
-        color--highlight: #333,
-        label-color: #999
+        border: #607B7D,
+        border--focus: #607B7D,
+        color: #AAAE8E,
+        color--highlight: #828E82,
+        label-color: #3A606E
     ),
     header: (
-        background: #333,
-        background--highlight: #111,
+        background: #3A606E,
+        background--highlight: #fff,
         color: #fff,
-        label-color: #555
+        label-color: rgba(#fff, .5)
     ),
     layout: (
-        background: #333,
-        border: rgba(#eee, .25),
+        background: #fff,
+        border: #e8e8e8,
         close-color: rgba(#fff, .5),
-        close-color-hover: lighten(#0a4e5f, 30%),
+        close-color-hover: lighten(#AAAE8E, 30%),
         close-border-color: rgba(#fff, .125),
         color: #999,
         content-background: #f8f8f8,
@@ -67,23 +67,24 @@ $palettes: (
         background--highlight: #efe778
     ),
     product: (
-        background: #0a4e5f,
-        background--n2: lighten(#0a4e5f, 10%),
-        background--n3: lighten(#0a4e5f, 20%),
-        background--n4: lighten(#0a4e5f, 30%),
+        background: #607B7D,
+        background--n2: #3A606E,
+        background--n3: #828E82,
+        background--n4: #AAAE8E,
+        background--light: #e8e8e8,
         border: #eee,
-        color--error: rgba(#fff, .5),
-        color--error-hover: #fff,
+        color--error: rgba(#fff, .1),
+        color--error-hover: rgba(#fff, .5),
         color--highlight: rgba(#fff, .75),
         color--main: #fff,
-        description: rgba(#000, .66)
+        description: rgba(#000, .8)
     ),
     quantity-trigger: (
-        background: #ccc,
+        background: #fff,
         background--hover: #efe778,
         background--disabled: #eee,
-        color: rgba(#fff, .5),
-        color--light: rgba(#fff, .25),
+        color: #3A606E,
+        color--light: #828E82,
         color--disabled: #bbb
     ),
     static: (
@@ -93,18 +94,11 @@ $palettes: (
         color--link: #999
     ),
     step: (
-        background: #ccc,
+        background: #fff,
         background--active: #fff,
-        background--1: #0a4e5f,
-        background--2: lighten(#0a4e5f, 5%),
-        background--3: lighten(#0a4e5f, 10%),
-        background--4: lighten(#0a4e5f, 15%),
-        background--5: lighten(#0a4e5f, 20%),
-        background--6: lighten(#0a4e5f, 25%),
-        background--7: lighten(#0a4e5f, 30%),
-        border: #bbb,
-        color: #fff,
-        color--active: lighten(#0a4e5f, 30%)
+        border: #e8e8e8,
+        color: #AAAE8E,
+        color--active: #3A606E
     ),
     table: (
         background--highlight: #f8f8f8,

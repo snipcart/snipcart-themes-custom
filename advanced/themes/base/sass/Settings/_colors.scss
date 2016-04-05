@@ -12,11 +12,11 @@ $palettes: (
         link: lighten(#0a4e5f, 30%)
     ),
     button: (
-        background: #607B7D,
-        background--highlight: #AAAE8E,
-        background--hover: #3A606E,
-        background--highlight-hover: darken(#AAAE8E, 10%),
-        color: rgba(#fff, .66),
+        background: #F3DE8A,
+        background--highlight: #CAE7B9,
+        background--hover: #F3DE8A,
+        background--highlight-hover: darken(#7E7F9A, 10%),
+        color: rgba(#000, .66),
         color--highlight: rgba(#000, .66)
     ),
     error: (
@@ -39,14 +39,14 @@ $palettes: (
     ),
     form: (
         background: transparent,
-        border: #607B7D,
-        border--focus: #607B7D,
-        color: #AAAE8E,
-        color--highlight: #828E82,
-        label-color: #3A606E
+        border: #97A7B3,
+        border--focus: #CAE7B9,
+        color: #7E7F9A,
+        color--highlight: #EB9486,
+        label-color: #97A7B3
     ),
     header: (
-        background: #3A606E,
+        background: #7E7F9A,
         background--highlight: #fff,
         color: #fff,
         label-color: rgba(#fff, .5)
@@ -55,7 +55,7 @@ $palettes: (
         background: #fff,
         border: #e8e8e8,
         close-color: rgba(#fff, .5),
-        close-color-hover: lighten(#AAAE8E, 30%),
+        close-color-hover: lighten(#7E7F9A, 30%),
         close-border-color: rgba(#fff, .125),
         color: #999,
         content-background: #f8f8f8,
@@ -67,24 +67,24 @@ $palettes: (
         background--highlight: #efe778
     ),
     product: (
-        background: #607B7D,
-        background--n2: #3A606E,
-        background--n3: #828E82,
-        background--n4: #AAAE8E,
+        background: #CAE7B9,
+        background--n2: #F3DE8A,
+        background--n3: #EB9486,
+        background--n4: #97A7B3,
         background--light: #e8e8e8,
         border: #eee,
-        color--error: rgba(#fff, .1),
-        color--error-hover: rgba(#fff, .5),
-        color--highlight: rgba(#fff, .75),
-        color--main: #fff,
-        description: rgba(#000, .8)
+        color--error: rgba(#555, .1),
+        color--error-hover: rgba(#555, .5),
+        color--highlight: rgba(#555, .75),
+        color--main: #555,
+        description: rgba(#555, .8)
     ),
     quantity-trigger: (
         background: #fff,
         background--hover: #efe778,
         background--disabled: #eee,
-        color: #3A606E,
-        color--light: #828E82,
+        color: #97A7B3,
+        color--light: #EB9486,
         color--disabled: #bbb
     ),
     static: (
@@ -97,8 +97,8 @@ $palettes: (
         background: #fff,
         background--active: #fff,
         border: #e8e8e8,
-        color: #AAAE8E,
-        color--active: #3A606E
+        color: #97A7B3,
+        color--active: #CAE7B9
     ),
     table: (
         background--highlight: #f8f8f8,

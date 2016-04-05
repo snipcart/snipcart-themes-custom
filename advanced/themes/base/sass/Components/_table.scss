@@ -133,6 +133,41 @@ $_table-border: 1px solid palette(table, border);
             }
         }
     }
+
+    #snipcart-fees {
+        float: left;
+        width: 66.666666%;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+        background: transparent;
+        font-size: fontsize(product, large);
+
+        tr {
+            width: 50%;
+            background: palette(header, background);
+
+            .snip-table__cell--highlight {
+                color: palette(header, background--highlight);
+            }
+        }
+    }
+
+    #snipcart-total {
+        overflow: hidden;
+        padding: 1.5rem 1.5rem 1.5rem 0;
+
+        tr {
+            width: 100%;
+            background: palette(header, background);
+
+            .snip-table__cell--highlight {
+                color: palette(header, background--highlight);
+            }
+        }
+    }
+}
+
+#snipcart-discounts-list {
+    display: none!important;
 }
 
 #snip-layout-shipping-method {
@@ -293,3 +328,4 @@ $_table-border: 1px solid palette(table, border);
     }
 
 }
+

@@ -85,6 +85,15 @@ $_layout-content-border: 1px solid palette(layout, content-border);
     }
 }
 
+#snip-layout-order-confirm .snip-layout__content {
+    padding-bottom: 2rem;
+    text-align: center;
+
+    .snip-static__title {
+        color: palette(product, background--n3);
+    }
+}
+
 .snip-layout__content--highlight {
     background-color: palette(layout, content-background);
     border-bottom: $_layout-content-border;

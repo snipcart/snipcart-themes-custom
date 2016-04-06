@@ -590,6 +590,7 @@ h4,
   .snip-layout .snip-actions__link--small {
     font-size: 12px; }
   .snip-layout #snipcart-items {
+    width: 100%;
     background: #e8e8e8;
     text-align: center; }
     .snip-layout #snipcart-items .snip-table__header {

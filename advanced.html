@@ -28,7 +28,17 @@
 </head>
 
 <body id="page-top">
-
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Simple example</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <header>
         <div class="header-content">
             <div class="header-content-inner">
@@ -55,6 +65,7 @@
 
 
     <script type="text/javascript">
+      Snipcart.execute('config', 'show_cart_automatically', false);
       Snipcart.subscribe('cart.ready', function() {
         $('#add-items').click (function (ev) {
           ev.preventDefault();
@@ -67,7 +78,10 @@
 
           var items = [item, item, item, item, item, item, item, item];
 
-          Snipcart.api.addItems(items);
+          Snipcart.api.addItems(items)
+            .then(function() {
+              Snipcart.api.showCart();
+            });
         });
       });
     </script>

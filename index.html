@@ -63,6 +63,17 @@
 
     <link type="text/css" href="themes/simple/snipcart.css" rel="stylesheet" />
 
+    <script>
+      Snipcart.subscribe('cart.ready', function (data) {
+        console.log(data);
+        console.log(JSON.stringify(data));
+      });
+
+      Snipcart.subscribe('order.completed', function (data) {
+        console.log('Order completed');
+        console.log(JSON.stringify(data));
+      });
+    </script>
 </body>
 
 </html>

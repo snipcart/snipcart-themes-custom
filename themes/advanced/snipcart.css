@@ -527,7 +527,8 @@ h4,
     padding: 1.125rem;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    font-size: 1.33em; }
+    font-size: 1.33em;
+    white-space: nowrap; }
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-header__total {
         padding: 0 .5rem 0 6rem; } }

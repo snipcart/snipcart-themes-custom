@@ -75,7 +75,7 @@
 
           var items = [item, item, item, item, item, item, item, item];
 
-          Snipcart.api.addItems(items)
+          Snipcart.api.items.add(items)
             .then(function() {
               Snipcart.api.showCart();
             });
